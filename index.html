@@ -2,143 +2,222 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <title>Team X অর্ডার ফর্ম</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>সেবা অর্ডার অ্যাপ</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
 
-    body {
-      font-family: 'Noto Sans Bengali', sans-serif;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      padding: 40px;
-      margin: 0;
-      color: #fff;
+    * {
+      box-sizing: border-box;
+      font-family: 'Hind Siliguri', sans-serif;
     }
 
-    form {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(15px);
-      padding: 35px;
-      max-width: 750px;
-      margin: auto;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    body {
+      background: linear-gradient(to right, #141e30, #243b55);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      text-align: center;
     }
 
     h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 25px;
-      color: #fff;
+      background-color: #1f2937;
+      margin: 0;
+      padding: 25px;
+      font-size: 26px;
+      letter-spacing: 1px;
     }
 
-    label {
-      display: block;
-      margin-top: 20px;
-      font-weight: bold;
+    .container {
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     }
 
-    input, select, textarea {
+    select, input {
       width: 100%;
-      padding: 12px;
-      border: none;
+      padding: 14px;
+      margin: 10px 0;
       border-radius: 10px;
-      margin-top: 8px;
+      border: none;
       font-size: 16px;
-      background: #f9f9f9;
+      background: #f8f9fa;
       color: #111;
     }
 
-    input:focus, select:focus, textarea:focus {
-      outline: 2px solid #38bdf8;
-      background: #fff;
+    input::placeholder {
+      color: #777;
     }
 
     button {
-      margin-top: 30px;
-      padding: 15px;
       width: 100%;
-      background: linear-gradient(to right, #f83600, #f9d423);
-      color: #000;
+      padding: 14px;
+      margin-top: 10px;
+      background: #10b981;
+      color: white;
+      font-size: 18px;
       border: none;
       border-radius: 10px;
-      font-size: 18px;
-      font-weight: bold;
+      transition: 0.3s;
       cursor: pointer;
-      transition: transform 0.2s;
     }
 
     button:hover {
-      transform: scale(1.03);
+      background: #059669;
     }
 
-    .note, .contact {
-      background: #fff;
-      color: #000;
+    .admin-login {
+      margin-top: 30px;
+    }
+
+    .admin-panel {
+      display: none;
+      margin: 30px auto;
+      max-width: 600px;
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .admin-panel h3 {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    ul li {
+      background: rgba(255,255,255,0.1);
+      margin: 10px 0;
       padding: 12px;
-      border-radius: 10px;
-      margin-top: 20px;
-      font-size: 16px;
-      line-height: 1.6;
+      border-radius: 8px;
+    }
+
+    ul li small {
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    ::selection {
+      background: #10b981;
+      color: white;
     }
   </style>
 </head>
 <body>
 
-  <form action="https://formsubmit.co/amdasrafulislam37@gmail.com" method="POST">
-    <h2> Team X অর্ডার ফর্ম</h2>
+  <h2>📋 সেবা অর্ডার সিস্টেম</h2>
 
-    <label for="name">👤 নাম</label>
-    <input type="text" name="name" required>
-
-    <label for="whatsapp">📱 WhatsApp নাম্বার দিন</label>
-    <input type="text" name="whatsapp" placeholder="01XXXXXXXXX" required>
-
-    <label for="service">🧾 কোন তথ্য লাগবে?</label>
-    <select name="service" required>
-      <option disabled selected>তথ্য বাছাই করুন</option>
-      <option>নাম্বার টু NID ইনফরমেশন</option>
-      <option>নাম্বার টু লাইভ/সর্বশেষ লোকেশন</option>
-      <option>নাম্বার টু ব্যক্তিগত তথ্য</option>
-      <option>নাম্বার টু কল লিস্ট</option>
-      <option>নাম্বার টু এসএমএস লিস্ট</option>
-      <option>নাম্বার টু ডিভাইস তথ্য</option>
-      <option>নাম্বার টু IMEI তথ্য</option>
-      <option>নাম্বার টু বিকাশ NID ইনফরমেশন</option>
-      <option>নাম্বার টু রকেট NID ইনফরমেশন</option>
-      <option>নাম্বার টু নগদ NID ইনফরমেশন</option>
-      <option>নাম্বার টু TIN ইনফরমেশন</option>
-      <option>NID টু জন্মনিবন্ধন ডিটেইলস</option>
-      <option>NID টু সমস্ত রেজিস্টার্ড নাম্বর</option>
-      <option>NID টু পাসপোর্ট ইনফরমেশন</option>
-      <option>IMEI টু ডিভাইস ইনফরমেশন</option>
-      <option>IMEI টু একটিভ ইউজার নাম্বার</option>
-      <option>IMEI টু লোকেশন + NID + নাম্বার</option>
-      <option>IMEI টু লোকেশন + NID + নাম্বার + কল লিস্ট</option>
+  <div class="container">
+    <select id="service">
+      <option disabled selected>অপশন সিলেক্ট করুন</option>
+      <option>রবি/এয়ারটেল বায়োমেট্রিক</option>
+      <option>বাংলালিংক বায়োমেট্রিক</option>
+      <option>টেলিটক বায়োমেট্রিক</option>
+      <option>গ্রামীফোন বায়োমেট্রিক</option>
+      <option>আইডি টু সকল নাম্বার</option>
+      <option>নাম্বার টু লোকেশন</option>
+      <option>MOBAIL NAMBUR TO IMEI</option>
+      <option>নগদ ইনফরমেশন</option>
+      <option>IMEI টু এক্টিভ নাম্বার</option>
+      <option>বিকাশ ইনফর্মেশন</option>
+      <option>ইউজার আইডি পাসওয়ার্ড সেট</option>
+      <option>বিকাশ স্টেটমেন্ট</option>
+      <option>BRILENT NUMBUR BIO</option>
+      <option>Balance Withdraw</option>
+      <option>নিবন্ধন ওটিপি চেঞ্জ</option>
+      <option>API SERVER COPY 100 TOKEN</option>
+      <option>BKASH PIN RESET</option>
+      <option>NAGAD PIN RESET</option>
+      <option>কল লিষ্ট</option>
+      <option>MRB পাসপোর্ট ভেরিফাই কপি</option>
+      <option>টিন সার্টিফিকেট</option>
+      <option>E-পাসপোর্ট ভেরিফাই কপি</option>
+      <option>নাম ঠিকানা দিয়ে সাইন</option>
       <option>নগদ স্টেটমেন্ট</option>
-      <option>৩/৬/১২/২৪ মাসের কারিগরি প্রশিক্ষণ সার্টিফিকেট</option>
+      <option>এনআইডি টু পাসপোর্ট এর ইনফরমেশন</option>
+      <option>সুরক্ষা ক্লোন সার্টিফিকেট</option>
+      <option>জন্ম নিবন্ধন ক্লোন</option>
+      <option>হারানো জন্ম নিবন্ধন উত্তোলন</option>
+      <option>জিরো রিটার্ন</option>
+      <option>রকেট স্টেটমেন্ট</option>
+      <option>স্মার্ট কার্ড পিডিএফ</option>
+      <option>SERVER COPY UNOFICAL</option>
+      <option>অনলাইনে জন্ম নিবন্ধন কপিঁ</option>
+      <option>হারানো সংশোধন ফরম উত্তলন</option>
+      <option>মোবাইল নাম্বার দিয়ে সাইন</option>
+      <option>পুলিশ ক্লিয়ারেন্স সার্টিফিকেট</option>
+      <option>Team X 🌼</option>
     </select>
 
-    <label for="details">📝 বাড়তি তথ্য দিন (কোন নাম্বার এ লাগবে বা আপনার ব্যক্তিগত কথা)</label>
-    <textarea name="details" rows="3" placeholder="যেই নম্বর এ তথ্য বের করতে চান ঐই টা দেন ইত্যাদি..."></textarea>
+    <input type="text" id="name" placeholder="আপনার নাম">
+    <input type="text" id="phone" placeholder="মোবাইল নাম্বার">
+    <button onclick="submitOrder()">📨 অর্ডার সাবমিট</button>
+  </div>
 
-    <!-- Hidden Configuration -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_subject" value="✅ নতুন অর্ডার এসেছে Team X থেকে!">
-    <input type="hidden" name="_next" value="https://formsubmit.co/thanks.html">
+  <div class="admin-login container">
+    <input type="password" id="adminPass" placeholder="🔐 অ্যাডমিন পাসওয়ার্ড দিন">
+    <button onclick="loginAdmin()">👨‍💻 অ্যাডমিন লগইন</button>
+  </div>
 
-    <div class="note">
-      ⏳ <strong>১০/১৫ মিনিট</strong> এর মধ্যে আপনার সাথে যোগাযোগ করা হবে।
-    </div>
+  <div class="admin-panel" id="adminPanel">
+    <h3>অর্ডার লিস্ট 🧾</h3>
+    <ul id="orderList"></ul>
+  </div>
 
-    <div class="contact">
-      📞 যোগাযোগ করতে চাইলে:<br>
-      মোবাইল: <strong>01923686604</strong><br>
-      ইমেইল: <strong>amdasrafulislam37@gmail.com</strong>
-    </div>
+  <script>
+    const orders = [];
 
-    <button type="submit">✅ অর্ডার সাবমিট করুন</button>
-  </form>
+    function submitOrder() {
+      const service = document.getElementById("service").value;
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+
+      if (!service || !name || !phone) {
+        alert("⚠️ দয়া করে সব তথ্য পূরণ করুন");
+        return;
+      }
+
+      const order = {
+        service,
+        name,
+        phone,
+        time: new Date().toLocaleString()
+      };
+
+      orders.push(order);
+      alert("✅ অর্ডার সফলভাবে জমা হয়েছে! 5 থেকে 10 মিনিট অপেক্ষা করুন ❤️‍🩹🌼");
+      document.getElementById("name").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("service").selectedIndex = 0;
+    }
+
+    function loginAdmin() {
+      const pass = document.getElementById("adminPass").value;
+      if (pass === "13356") {
+        const panel = document.getElementById("adminPanel");
+        const list = document.getElementById("orderList");
+        panel.style.display = "block";
+        list.innerHTML = "";
+
+        if (orders.length === 0) {
+          list.innerHTML = "<li>🚫 এখনো কোন অর্ডার নেই</li>";
+        } else {
+          orders.forEach((o, i) => {
+            list.innerHTML += `<li><b>🆔 #${i + 1}</b><br>👤 ${o.name} (${o.phone})<br>🛠️ <i>${o.service}</i><br><small>⏰ ${o.time}</small></li>`;
+          });
+        }
+      } else {
+        alert("❌ ভুল পাসওয়ার্ড!");
+      }
+    }
+  </script>
 
 </body>
-        </html>
+  </html>
